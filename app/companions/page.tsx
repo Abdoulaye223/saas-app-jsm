@@ -1,5 +1,5 @@
 import CompanionCard from "@/components/CompanionCard";
-import { getAllCompanions } from "@/lib/action/companion_action";
+import { getAllCompanions } from "@/lib/action/companion.action";
 import { getSubjectColor } from "@/lib/utils";
 import SearchInput from "./SearchInput";
 import SubjectFilter from "./SubjectFilter";

@@ -23,7 +23,7 @@ import {
 } from "@/components/ui/select";
 import { subjects } from "@/constants";
 import { Textarea } from "./ui/textarea";
-import { createCompanion } from "@/lib/action/companion_action";
+import { createCompanion } from "@/lib/action/companion.action";
 import { redirect } from "next/navigation";
 
 const formSchema = z.object({
@@ -207,8 +207,10 @@ const CompanionForm = () => {
               <FormControl>
                 <Input
                 type="number"
+                min={1}
                   placeholder="15"
                   {...field}
+                  onChange={e => field.onChange(Number(e.target.value))}
                   className="input"
                 />
               </FormControl>
